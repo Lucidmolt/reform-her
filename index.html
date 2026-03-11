@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reform HER Pilates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        studio: {
+                            black: '#0a0a0a',
+                            dark: '#141414',
+                            gold: '#cba153',
+                            lightgold: '#e6c875',
+                            darkgold: '#8c6b2e'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        script: ['"Great Vibes"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0a0a0a; color: #f3f4f6; }
+        .text-gradient {
+            background: linear-gradient(to right, #e6c875, #cba153, #8c6b2e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #cba153 0%, #8c6b2e 100%);
+            color: #0a0a0a;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #e6c875 0%, #cba153 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(203, 161, 83, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-studio-gold selection:text-studio-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-studio-black/90 backdrop-blur-sm border-b border-studio-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex items-center">
+                    <img src="public/logo.jpg" alt="Reform HER Logo" class="h-20 object-contain">
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-studio-lightgold transition font-sans text-sm uppercase tracking-widest">Studio</a>
+                    <a href="#classes" class="text-gray-300 hover:text-studio-lightgold transition font-sans text-sm uppercase tracking-widest">Classes</a>
+                    <a href="#pricing" class="text-gray-300 hover:text-studio-lightgold transition font-sans text-sm uppercase tracking-widest">Pricing</a>
+                    <a href="#book" class="btn-gold px-6 py-2.5 rounded-full font-sans font-semibold text-sm uppercase tracking-wider">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Abstract dark background with gold accents -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-studio-dark via-studio-black to-studio-black -z-10"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-overlay -z-20"></div>
+        
+        <div class="text-center px-4 max-w-4xl mx-auto mt-16">
+            <h2 class="font-script text-4xl md:text-6xl text-studio-gold mb-4">Empower Your Core</h2>
+            <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight">
+                Redefine Your <br>
+                <span class="text-gradient font-bold">Strength</span>
+            </h1>
+            <p class="text-gray-400 font-sans text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                A premium boutique reformer pilates studio designed exclusively for women. Build long, lean muscles and center your mind in a space crafted for your transformation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#book" class="btn-gold px-8 py-4 rounded-full font-sans font-semibold uppercase tracking-widest text-sm">View Schedule</a>
+                <a href="#about" class="px-8 py-4 rounded-full font-sans font-semibold uppercase tracking-widest text-sm border border-studio-gold text-studio-gold hover:bg-studio-gold/10 transition">Our Philosophy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-studio-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h3 class="text-studio-gold font-sans uppercase tracking-widest text-sm mb-2">Welcome to the Studio</h3>
+                    <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">More Than Just a Workout.</h2>
+                    <p class="text-gray-400 font-sans mb-6 leading-relaxed font-light">
+                        At Reform HER, we believe in the power of movement to heal, strengthen, and empower. Our state-of-the-art reformers and expertly crafted routines are designed to meet you where you are and push you to where you want to be.
+                    </p>
+                    <p class="text-gray-400 font-sans mb-8 leading-relaxed font-light">
+                        Whether you are recovering from an injury, looking to tone and sculpt, or simply seeking an hour of mindful movement, our intimate class sizes ensure you get the personalized attention you deserve.
+                    </p>
+                    <img src="public/logo.jpg" alt="Reform HER Accent" class="h-24 opacity-80 mix-blend-screen">
+                </div>
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-t-full overflow-hidden border border-studio-gold/30 p-2">
+                        <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2940&auto=format&fit=crop" alt="Pilates Reformer" class="w-full h-full object-cover rounded-t-full grayscale hover:grayscale-0 transition duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="py-24 bg-studio-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-studio-gold font-sans uppercase tracking-widest text-sm mb-2">Our Offerings</h3>
+                <h2 class="text-4xl md:text-5xl font-serif text-white">Signature Classes</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Class 1 -->
+                <div class="group border border-studio-gold/20 bg-studio-dark p-8 rounded-2xl hover:border-studio-gold/60 transition duration-500">
+                    <h4 class="text-2xl font-serif text-white mb-3 group-hover:text-studio-lightgold transition">Reform Fundamentals</h4>
+                    <p class="text-gray-400 font-sans text-sm mb-6 leading-relaxed font-light">
+                        Perfect for beginners. Master the machine, learn proper breathing techniques, and build a solid foundation of core strength and alignment.
+                    </p>
+                    <span class="text-studio-gold font-sans text-xs uppercase tracking-widest border-b border-studio-gold pb-1">50 Minutes</span>
+                </div>
+
+                <!-- Class 2 -->
+                <div class="group border border-studio-gold/20 bg-studio-dark p-8 rounded-2xl hover:border-studio-gold/60 transition duration-500 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-studio-gold text-studio-black text-[10px] uppercase tracking-widest px-3 py-1 font-bold rounded-bl-lg">Most Popular</div>
+                    <h4 class="text-2xl font-serif text-white mb-3 group-hover:text-studio-lightgold transition">Signature Sculpt</h4>
+                    <p class="text-gray-400 font-sans text-sm mb-6 leading-relaxed font-light">
+                        A dynamic, full-body workout designed to tone, lengthen, and challenge your endurance. Expect a burn and a beautiful sweat.
+                    </p>
+                    <span class="text-studio-gold font-sans text-xs uppercase tracking-widest border-b border-studio-gold pb-1">50 Minutes</span>
+                </div>
+
+                <!-- Class 3 -->
+                <div class="group border border-studio-gold/20 bg-studio-dark p-8 rounded-2xl hover:border-studio-gold/60 transition duration-500">
+                    <h4 class="text-2xl font-serif text-white mb-3 group-hover:text-studio-lightgold transition">Stretch & Restore</h4>
+                    <p class="text-gray-400 font-sans text-sm mb-6 leading-relaxed font-light">
+                        A slower-paced class focusing on deep stretching, mobility, and recovery. Perfect for active rest days or relieving tension.
+                    </p>
+                    <span class="text-studio-gold font-sans text-xs uppercase tracking-widest border-b border-studio-gold pb-1">50 Minutes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-studio-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-studio-gold font-sans uppercase tracking-widest text-sm mb-2">Investment</h3>
+                <h2 class="text-4xl md:text-5xl font-serif text-white">Membership Options</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Drop In -->
+                <div class="border border-studio-gold/20 p-8 rounded-2xl text-center flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-xl font-serif text-white mb-2">Single Class</h4>
+                        <div class="text-4xl font-sans text-studio-gold font-light mb-6">$35</div>
+                        <ul class="text-gray-400 font-sans text-sm space-y-3 mb-8 text-left max-w-[200px] mx-auto">
+                            <li class="flex items-center"><span class="text-studio-gold mr-2">✓</span> Valid for 30 days</li>
+                            <li class="flex items-center"><span class="text-studio-gold mr-2">✓</span> Mat & towel included</li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-3 rounded-full font-sans text-sm uppercase tracking-widest border border-studio-gold text-studio-gold hover:bg-studio-gold/10 transition">Buy Now</button>
+                </div>
+
+                <!-- Unlimited -->
+                <div class="border border-studio-gold p-8 rounded-2xl text-center bg-studio-black relative shadow-[0_0_30px_rgba(203,161,83,0.15)] flex flex-col justify-between transform md:-translate-y-4">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-studio-gold text-studio-black text-xs uppercase tracking-widest px-4 py-1 rounded-full font-bold">Best Value</div>
+                    <div>
+                        <h4 class="text-xl font-serif text-white mb-2">Monthly Unlimited</h4>
+                        <div class="text-4xl font-sans text-studio-gold font-light mb-2">$249<span class="text-lg text-gray-500">/mo</span></div>
+                        <p class="text-xs text-gray-500 mb-6 font-sans">Auto-renews monthly</p>
+                        <ul class="text-gray-400 font-sans text-sm space-y-3 mb-8 text-left max-w-[200px] mx-auto">
+                            <li class="flex items-center"><span class="text-studio-gold mr-2">✓</span> Unlimited classes</li>
+                            <li class="flex items-center"><span class="text-studio-gold mr-2">✓</span> 10% off apparel</li>
+                            <li class="flex items-center"><span class="text-studio-gold mr-2">✓</span> Advanced booking (14 days)</li>
+                            <li class="flex items-center"><span class="text-studio-gold mr-2">✓</span> 2 Guest passes/mo</li>
+                        </ul>
+                    </div>
+                    <button class="w-full btn-gold py-3 rounded-full font-sans text-sm uppercase tracking-widest font-semibold text-studio-black">Subscribe</button>
+                </div>
+
+                <!-- Class Pack -->
+                <div class="border border-studio-gold/20 p-8 rounded-2xl text-center flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-xl font-serif text-white mb-2">10 Class Pack</h4>
+                        <div class="text-4xl font-sans text-studio-gold font-light mb-6">$300</div>
+                        <ul class="text-gray-400 font-sans text-sm space-y-3 mb-8 text-left max-w-[200px] mx-auto">
+                            <li class="flex items-center"><span class="text-studio-gold mr-2">✓</span> $30 per class</li>
+                            <li class="flex items-center"><span class="text-studio-gold mr-2">✓</span> Valid for 6 months</li>
+                            <li class="flex items-center"><span class="text-studio-gold mr-2">✓</span> Shareable with a friend</li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-3 rounded-full font-sans text-sm uppercase tracking-widest border border-studio-gold text-studio-gold hover:bg-studio-gold/10 transition">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section (Acuity Integration) -->
+    <section id="book" class="py-24 bg-studio-black border-t border-studio-gold/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-studio-gold font-sans uppercase tracking-widest text-sm mb-2">Reserve Your Spot</h3>
+            <h2 class="text-4xl md:text-5xl font-serif text-white mb-10">Class Schedule</h2>
+            
+            <!-- Acuity Embed Placeholder -->
+            <div class="bg-studio-dark border border-studio-gold/20 rounded-2xl p-4 md:p-8 min-h-[600px] flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-studio-gold/5 via-transparent to-transparent"></div>
+                
+                <!-- This div will be replaced by the Acuity iframe -->
+                <div id="acuity-placeholder" class="text-center z-10">
+                    <svg class="w-12 h-12 text-studio-gold/50 mx-auto mb-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <p class="text-gray-400 font-sans font-light">Interactive Acuity Booking Calendar will load here.</p>
+                    <p class="text-sm text-studio-gold mt-2 font-sans uppercase tracking-widest text-xs">Awaiting Embed Code</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-studio-black border-t border-studio-gold/20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <img src="public/logo.jpg" alt="Reform HER Logo" class="h-16 object-contain mb-4 mx-auto md:mx-0">
+                <p class="text-gray-500 font-sans text-sm font-light">© 2026 Reform HER Pilates. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6 text-sm font-sans uppercase tracking-widest text-gray-400">
+                <a href="#" class="hover:text-studio-gold transition">Instagram</a>
+                <a href="#" class="hover:text-studio-gold transition">Contact</a>
+                <a href="#" class="hover:text-studio-gold transition">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
