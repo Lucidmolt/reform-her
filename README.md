@@ -1,21 +1,34 @@
-# ReformHER Pilates Website
-A purely static HTML/TailwindCSS frontend site deployed to Vercel.
+# Reform HER Pilates - Website Documentation
 
-## Pre-Launch Modifications (Temp Overrides)
-The site is currently configured for lead-generation prior to the official launch. Be sure to revert the following temporary changes when the studio officially opens:
+## Overview
+This is the frontend repository for **Reform HER Pilates** (`reformher.fit`), a studio designed specifically for women. The site is a responsive, single-page marketing and waitlist portal.
 
-1. **Waitlist Section (`#waitlist`)**: 
-   - An email capture form (Formspree endpoint: `https://formspree.io/f/xnjgdvzl`) was added above the footer.
-   - When the studio launches, decide whether to keep this for a newsletter or remove it entirely.
+## Hosting & Deployment
+- **Hosting Provider:** Vercel (Global CDN)
+- **Primary Domain:** `https://reformher.fit`
+- **Deployment Strategy:** Vercel is connected directly to the GitHub repository. Any push to the `main` branch automatically triggers a new deployment to production.
 
-2. **Class Schedule (`#book`)**: 
-   - The Acuity Scheduling embed code was replaced with a temporary "Coming Soon" placeholder box.
-   - The "Stay Tuned" button inside this box scrolls down to the `#waitlist` form.
-   - *Launch Todo*: Remove the "Coming Soon" box and inject the official Acuity iframe.
+## Repository Information
+- **GitHub URL:** `https://github.com/Lucidmolt/reform-her`
+- **Local Path (OpenClaw):** `/Users/lucid/.openclaw/workspace/projects/reform-her`
+- **Branch:** `main`
 
-3. **Navigation Links ("Book Now" / "View Schedule")**:
-   - The primary CTA buttons (Header "Book Now" and Hero "View Schedule") were temporarily repointed from `href="#book"` to `href="#waitlist"`.
-   - *Launch Todo*: Repoint these back to `href="#book"` so users scroll to the actual calendar embed.
+## Tech Stack
+- **HTML5:** Pure HTML structure.
+- **CSS Framework:** Tailwind CSS (loaded via CDN for simplicity and rapid prototyping).
+- **Fonts:** Playfair Display, Inter, and Great Vibes (via Google Fonts).
+- **Forms:** Formspree is currently used for the Waitlist collection (`https://formspree.io/f/xnjgdvzl`).
+- **Booking Integration:** Acuity Scheduling (placeholder structure is present in the HTML, pending official embed links).
 
-## Development Commands
-To work on this project locally, simply open `index.html` in a web browser. Deployment is automatically handled via pushes to the `main` branch on GitHub.
+## File Structure
+- `index.html`: The core landing page containing all sections (Hero, About, Classes, Pricing, Waitlist).
+- `assets/`: Directory containing static images (e.g., `logo.png`, `favicon.png`, `og-image.jpg`).
+
+## Maintaining the Site
+1. **Local Edits:** Changes are made directly to `index.html`.
+2. **Version Control:** Edits must be committed to git.
+3. **Deployment:** Pushing commits to GitHub (`git push origin main`) will automatically update the live website on Vercel within seconds.
+
+## Upcoming Tasks
+- Replace dummy social media links with official URLs once accounts are created.
+- Finalize the Acuity booking embed code.
