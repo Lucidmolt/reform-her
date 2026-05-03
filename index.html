@@ -115,7 +115,14 @@
                 </div>
                 <div class="relative">
                     <div class="aspect-[4/5] rounded-t-full overflow-hidden border border-studio-gold/30 p-2">
-                        <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2940&auto=format&fit=crop" alt="Pilates Reformer" class="w-full h-full object-cover rounded-t-full grayscale hover:grayscale-0 transition duration-700">
+                        <div class="w-full h-full rounded-t-full overflow-hidden relative">
+                            <video 
+                                id="parallax-video"
+                                src="assets/reformer-scroll.mp4" 
+                                playsinline autoplay muted loop 
+                                class="absolute top-[-15%] left-0 w-full h-[130%] object-cover object-center grayscale hover:grayscale-0 transition-[filter] duration-700"
+                            ></video>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -306,5 +313,35 @@
         </div>
     </footer>
 
+    <!-- Scroll Parallax Script for Video -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const video = document.getElementById("parallax-video");
+            
+            // Listen for scroll events to apply parallax effect
+            window.addEventListener("scroll", () => {
+                if (!video) return;
+                
+                // Get the bounding box of the video container relative to the viewport
+                const rect = video.parentElement.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                // Only animate if the container is visible in the viewport
+                if (rect.top <= windowHeight && rect.bottom >= 0) {
+                    // Calculate scroll percentage through the element's visibility window
+                    // When rect.top === windowHeight, progress is 0
+                    // When rect.bottom === 0, progress is 1
+                    const progress = 1 - (rect.bottom / (windowHeight + rect.height));
+                    
+                    // We made the video 130% height and top-[-15%] initially. 
+                    // Let's translate it based on scroll to create the parallax.
+                    // Max translation should keep it within the bounds of its 130% height.
+                    const yOffset = (progress * 30) - 15; // Maps progress 0->1 to -15% -> +15%
+                    
+                    video.style.transform = `translateY(${yOffset}%)`;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
